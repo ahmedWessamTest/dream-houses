@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/quill/dist/quill.snow.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -96,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8c790b09-add1-4638-b944-1e13ef359ed4"
   }
 }

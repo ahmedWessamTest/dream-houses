@@ -1,0 +1,109 @@
+<section>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
+      <div class="col">
+        <div>
+          <span>
+            <img src="./assets/icons/adds-ico.svg" alt="adds icon " />
+            تهيئة الحملات الاعلانيه</span
+          >
+          <h1 class="mt-5">مرحبًا بك في منصة أختيار عقارات سكنية للتعمير</h1>
+          <p>
+            قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة""قم بإضافة
+            عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة"
+          </p>
+          <ul class="mt-4">
+            <li>
+              <img src="./assets/icons/list-ico.svg" alt="" />
+              <span>قم بتحميل شعارك وتفاصيل علامتك التجارية</span>
+            </li>
+            <li>
+              <img src="./assets/icons/list-ico.svg" alt="" />
+              <span>اختر وخصص الحقول التي تحتاجها</span>
+            </li>
+            <li>
+              <img src="./assets/icons/list-ico.svg" alt="" />
+              <span>اختر موضوعاً وصمم مظهر استمارتك</span>
+            </li>
+            <li>
+              <img src="./assets/icons/list-ico.svg" alt="" />
+              <span>ضبط رسالة شكر وإجراءات المتابعة</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="px-2">
+          <h2>طريقة بناء الحملة الخاصة بك</h2>
+          <p>الطريقة المختارة لطريقة إنشاء رسالة الحملة</p>
+          <form [formGroup]="homeForm" (ngSubmit)="submitInitInformation()">
+            <div class=" form-check form-check-inline mx-0 w-100 p-0">
+              <label class="check-container" for="manualSelection">
+                <img src="./assets/icons/manaual-selection-ico.svg" alt="" />
+                <h3>اختيار يدوي</h3>
+                <p>
+                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
+                </p>
+                <input
+                  class="form-check-input input-left"
+                  type="radio"
+                  name="messageOption"
+                  id="manualSelection"
+                  formControlName="messageOption"
+                  value="manual"
+                />
+              </label>
+            </div>
+            <div class=" form-check form-check-inline mt-3 mx-0 w-100 p-0">
+              <label class="check-container" for="automaticSelection">
+                <img src="./assets/icons/AI-selection-ico.svg" alt="" />
+                <h3>إنشاء عبر الذكاء الأصطناعي</h3>
+                <p>
+                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
+                </p>
+                <input
+                  class="form-check-input input-left"
+                  type="radio"
+                  name="messageOption"
+                  id="automaticSelection"
+                  formControlName="messageOption"
+                  value="automatic"
+                />
+              </label>
+            </div>
+            @if (!homeForm.get('messageOption')?.errors) {
+            <div class="naming-form mt-3">
+              <h3>قم بتسمية مشروع أختيار</h3>
+              <p>أسم مشروعك يجب ان يكون مميز وواضح</p>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="أسم مشروع مقترح"
+                formControlName="projectName"
+              />
+            </div>
+            @if (homeForm.get('projectName')?.errors &&
+            (homeForm.get('projectName')?.touched ||
+            homeForm.get('projectName')?.dirty)) {
+            <p class="text-danger">
+              @if (homeForm.get('projectName')?.getError('required')) {
+              <span>هذا الحقل مطلوب</span>
+              } @if (homeForm.get('projectName')?.getError('minlength')) {
+              <span>يجب كتابه 3 حروف علي الاقل</span>
+              }
+            </p>
+            } }
+            <button
+              class="main-btn me-auto d-block mt-3"
+              type="submit"
+              [disabled]="homeForm.invalid"
+            >
+              ابداء الان
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/images/main-bg.png" class="bg-image" alt="" />
+  </div>
+</section>

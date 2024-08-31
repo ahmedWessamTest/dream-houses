@@ -1,0 +1,120 @@
+.prob-title {
+  text-align: center;
+  position: relative;
+  max-width: 300px;
+}
+.prob-title h1{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.prob-title p{
+  color: #A5A7AB;
+  font-size: 14px;
+}
+.prob-title svg{
+  position: absolute;
+}
+.prob-title svg[width="14"] {
+  top: -20px;
+  right: 20px;
+}
+.prob-title svg[width="19"] {
+  bottom: -30px;
+  left: -15px;
+}
+.prob-title svg path {
+  fill:#F8B602;
+}
+.name-desc {
+  max-width: 473px;
+}
+.text-title,
+.name-desc label {
+  color: #6B7280;
+  font-size: .8125rem;
+}
+.name-desc {
+  font-size: 14px;
+}
+.quill-editor {
+  width: 100%;
+}
+.ql-editor {
+  direction: rtl;
+  text-align: right;
+}
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  display: none !important;
+}
+.text-aria {
+  position: relative;
+  background-color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .msg-container.msg-img::after,
+  .text-aria::after {
+    content: url('../../../assets/images/message-bg.svg');
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-70%);
+    z-index: -1;
+  }
+}
+.radio-input  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+input[type="radio"] {
+  border: 1px solid #8E8E93;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 0;
+  vertical-align: center;
+}
+input[type="radio"]:checked{
+  --bs-form-check-bg-image: url('../../../assets/icons/radio-ico.svg');
+  background-color: white;
+  border: none;
+
+}
+.msg-container {
+  border: 0.75px solid #D3D6DC66 !important;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 3px 7.6px 0px #9292921A;
+  margin-top: 10px;
+  position: relative;
+  background-color: white;
+}
+.msg-container .msg-title {
+  color: #615E83;
+}
+.show-text {
+  min-height: 234px;
+  border: none;
+  resize: none;
+  scrollbar-width: none;
+  position: relative;
+}
+.show-text:focus {
+  border: none;
+  box-shadow: none;
+  
+}
+.show-text::-webkit-scrollbar {
+  display: none;
+}
+.line-text {
+  position: relative;
+}
+.line-text::after {
+  content: "";
+    width: calc(100% + 24px);
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    background-color: #D3D6DC66;
+}

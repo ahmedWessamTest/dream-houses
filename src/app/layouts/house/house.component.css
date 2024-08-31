@@ -1,0 +1,38 @@
+:host{
+  min-height: 100vh;
+  position: relative;
+}
+.bg-main {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+svg.close-btn:hover path {
+  fill:#FF4B55;
+}
+.backward-btn img {
+  transition: 0.5s transform;
+}
+.backward-btn:hover img {
+  transform: translateX(5px);
+}
+.main-progress {
+  height: 6px;
+  background-color: #DEDFE6;
+}
+.main-progress div {
+  background-color: #3E97FF;
+  border-radius: 100vh;
+  animation: progressAnim 1s linear;
+}
+@keyframes  progressAnim {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50%;
+  }
+}

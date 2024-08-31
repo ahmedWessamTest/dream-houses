@@ -1,0 +1,46 @@
+.selection-title {
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.selection-title h1{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.selection-title p{
+  color: #A5A7AB;
+  font-size: 14px;
+}
+.selection-title svg{
+  position: absolute;
+}
+.selection-title svg[width="14"] {
+  top: -10px;
+  right: 30px;
+}
+.selection-title svg[width="19"] {
+  bottom: -30px;
+  left: -15px;
+}
+.check-container input:checked {
+  --bs-form-check-bg-image: url('../../../assets/icons/radio-ico.svg');
+  background-color: white;
+  border: none;
+}
+.check-container:hover {
+  box-shadow: 0px 2px 7.2px 0px #94949433;
+}
+.check-container:has(input:checked) {
+  border-color: #4F9FFD;
+}
+form {
+  margin-top:70px;
+}
+form label h3 {
+  font-size: .875rem;
+  margin-top: 10px;
+}
+.main-btn {
+  width: 165px;
+}

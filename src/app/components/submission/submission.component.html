@@ -1,0 +1,49 @@
+<section>
+  <div class="container">
+    @if(steps === 1){
+    <div class="content">
+      <dir class="submission-title">
+        <h1>جاري إرسال رسالتك الأسكانية</h1>
+        <p>الرجاء الأنتظار بعض الدقائق فقط</p>
+      </dir>
+      <div class="video-container mx-auto">
+        <video loop autoplay muted>
+          <source
+            src="./assets/animations/sending-animation.webm"
+            type="video/webm"
+          />
+        </video>
+      </div>
+      <div class="send-progress">
+        <div class="d-flex justify-content-between mb-1">
+          <span>جاري الأرسال</span>
+          <span>{{ fakeSend }}/100</span>
+        </div>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="loading bar"
+          [attr.aria-valuenow]="fakeSend"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="progress-bar" [style.width]="fakeSend + '%'"></div>
+        </div>
+      </div>
+    </div>
+  } @else if (steps === 2) {
+    <div class="content">
+      <dir class="submission-title">
+        <h1>تم إرسال رسالتك بنجاح</h1>
+        <p>الرجاء الأنتظار بعض الدقائق فقط</p>
+      </dir>
+      <div class="video-container-succ">
+        <video loop autoplay muted>
+          <source src="./assets/animations/succe-msg.webm" type="video/webm" />
+        </video>
+      </div>
+    </div>
+    <button class="btn exit-btn" (click)="exitFunc()">خروج</button>
+    }
+  </div>
+</section>

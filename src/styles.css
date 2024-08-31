@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "neo sans arabic";
+  src: url(./assets/fonts/alfont_com_NeoSansArabic.ttf);
+}
+
+body{
+  font-family: "neo sans arabic";
+  overflow-x: hidden;
+}
+section {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+ul {
+  list-style: none;
+}
+.main-btn {
+  background-color: #3E97FF;
+  border: none;
+  padding: 8px 24px;
+  color: white;
+  border-radius: 4px;
+  border: 0.5px solid #3E97FF;
+  font-size: .875rem;
+  font-weight: 500;
+}
+.main-btn:hover {
+  box-shadow: 0px -2px 21.1px 0px #4FA0FF66;
+}
+.main-btn:disabled {
+  background-color: #B0BBD5;
+  cursor: not-allowed;
+  border: none;
+}
+.check-container {
+  cursor: pointer;
+  border: 0.75px solid #ECECEC;
+  border-radius: 6px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+.check-container input {
+  background-color: #ECECEC;
+  border: none;
+  position: absolute;
+}
+.check-container input.input-left {
+  top: 4px;
+  left: 32px;
+}
+.check-container input.input-right {
+  top: 4px;
+  right: 15px;
+}
+.quill-editor {
+  border: 0.75px solid #D3D6DC;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  display: block;
+  right: -20px;
+}
+.ql-container.ql-snow {
+  min-height: 200px;
+  border: none;
+}
+
+.ql-editor {
+  direction: rtl;
+  text-align: right;
+
+}
+.ql-toolbar.ql-snow {
+  padding: 0;
+  background-color: #F2F4F7;
+  border: none;
+}
+.ql-toolbar.ql-snow .ql-formats {
+  position: relative;
+  padding: 16px 10px;
+}
+@media screen and (min-width: 992px) {
+  .ql-toolbar.ql-snow .ql-formats:not(:last-child):before{
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #EAECF0;
+  left: -5px;
+  top: 0;
+}
+}
+footer {
+  margin-top: 20px;
+  color: #9CA3AF;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}

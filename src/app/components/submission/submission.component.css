@@ -1,0 +1,53 @@
+section {
+  padding: 80px 0;
+}
+.submission-title {
+  text-align: center;
+  padding: 0;
+}
+.submission-title h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #323338;
+}
+.submission-title p {
+  color: #83899F;
+}
+.video-container {
+  width: 200px;
+  height: 200px;
+  border: 8.19px solid #3E97FF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-container video{
+  width: 207px;
+  height: 171px;
+}
+.send-progress{
+  max-width: 560px;
+  margin: auto;
+  height: 10px;
+}
+.send-progress {
+  margin-top: 30px;
+  font-size: 14px;
+}
+.video-container-succ {
+  width: fit-content;
+  margin: auto;
+  width: 258px;
+  height: 258px;
+}
+.video-container-succ video {
+  width: 258px;
+  height: 258px;
+}
+.exit-btn {
+  color: #3E97FF;
+  margin: auto;
+  display: block;
+  margin-top: 40px;
+}

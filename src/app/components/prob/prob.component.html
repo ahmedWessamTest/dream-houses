@@ -1,0 +1,128 @@
+<section>
+  <div class="container">
+    @if (steps === 1) {
+    <div class="prob-title mt-5">
+      <h1>قم بكتابة وصف منزل أحلامك</h1>
+      <svg
+        width="14"
+        height="16"
+        viewBox="0 0 19 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.25136 0.554851C9.25136 5.68566 5.08786 9.88395 0 9.88395C5.08786 9.88395 9.25136 14.0817 9.25136 19.213C9.25136 14.0817 13.4149 9.88395 18.5027 9.88395C13.4149 9.88395 9.25136 5.68566 9.25136 0.554851Z"
+          fill="#3E97FF"
+        /></svg
+      ><svg
+        width="19"
+        height="20"
+        viewBox="0 0 19 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.25136 0.554851C9.25136 5.68566 5.08786 9.88395 0 9.88395C5.08786 9.88395 9.25136 14.0817 9.25136 19.213C9.25136 14.0817 13.4149 9.88395 18.5027 9.88395C13.4149 9.88395 9.25136 5.68566 9.25136 0.554851Z"
+          fill="#3E97FF"
+        />
+      </svg>
+    </div>
+    <form class="mt-5" [formGroup]="homeDescForm" (ngSubmit)="homeDescSubmit()">
+      <div class="name-desc">
+        <label for="nameDesc">وصف مختصر عن المنزل</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          value="فيلا قريبه من القاهرة"
+          formControlName="descControl"
+        />
+      </div>
+      <p class="mt-3 mb-2 p-0 text-title">وصف تعبيري عن المنزل</p>
+      <div class="text-aria">
+        <quill-editor
+          class="quill-editor"
+          [modules]="editorModules"
+          [styles]="editorStyles"
+          [placeholder]="quillConfig.placeholder"
+          formControlName="detailsControl"
+        >
+        </quill-editor>
+      </div>
+      <button
+        class="main-btn mx-auto d-block mt-5"
+        [disabled]="homeDescForm.invalid"
+        type="submit"
+      >
+        الخطوة التاليه
+      </button>
+    </form>
+    } @else if (steps === 2) {
+    <div class="prob-title text-end mt-5">
+      <h1>قم بكتابة نص الرسالة المرسلة</h1>
+      <p>قم بتسمية حملتك و تاريخ إرسال الحملة المتوقع</p>
+    </div>
+    <form class="mt-5" [formGroup]="homeMsgForm" (ngSubmit)="homeMsgSubmit()">
+      <div class="msg-container msg-img home-style">
+        <p class="msg-title">
+          <img src="./assets/icons/calendar-ico.svg" alt="calender icon" />
+          تصميم المنزل
+        </p>
+        <div class="d-flex gap-4">
+          <div class="radio-input">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="homeDesignOption"
+              id="ModernHome"
+              formControlName="homeDesignOption"
+              value="تصميم حديث"
+            />
+            <label class="form-check-label" for="ModernHome">
+              تصميم حديث
+            </label>
+          </div>
+          <div class="radio-input">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="homeDesignOption"
+              id="smartHome"
+              formControlName="homeDesignOption"
+              value="تصميم ذكي"
+            />
+            <label class="form-check-label" for="smartHome">
+              تصميم حديث وذكي
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="msg-container home-style">
+        <p class="msg-title">
+          <img src="../../../assets/icons/eye-ico.svg" alt="eye icon" />
+          معاينة وصف المنزل
+        </p>
+        <p><span class="msg-title">الموضوعات</span>: {{ userDescValue }}</p>
+        <div class="mb-3 line-text">
+          <textarea
+            class="form-control show-text"
+            id="exampleFormControlTextarea1"
+            readonly
+          >
+        {{ userDetailsValue }}
+      </textarea>
+        </div>
+      </div>
+      <button
+        class="main-btn mx-auto d-block mt-5"
+        [disabled]="homeMsgForm.invalid"
+        type="submit"
+      >
+        الخطوة التاليه
+      </button>
+    </form>
+    }
+    <footer class="mt-1">
+      <p>قم بالضغط على زر "بدء" للبدء في العملية، لادخال معلومات المنزل</p>
+    </footer>
+  </div>
+</section>

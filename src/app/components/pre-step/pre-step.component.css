@@ -1,0 +1,58 @@
+.bg-image{
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 50%;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+ }
+h2,
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #183B56;
+}
+p {
+  color: #83899F;
+}
+ul li {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  color: #464E5F;
+}
+.linear-bg span,
+ul li span {
+  font-size: .875rem;
+}
+.naming-form h3{
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #183B56;
+}
+.naming-form input::placeholder {
+  font-size: .875rem;
+  color: #B7B7B7;
+}
+.check-container input:checked {
+  --bs-form-check-bg-image: url('../../../assets/icons/radio-ico.svg');
+  background-color: white;
+  border: none;
+}
+form{
+  width: fit-content;
+}
+.main-btn[type="submit"]{
+  width: 198px;
+}
+.check-container h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.check-container:hover,
+.check-container:has(input:checked) {
+  border-color: #4F9FFD;
+}
