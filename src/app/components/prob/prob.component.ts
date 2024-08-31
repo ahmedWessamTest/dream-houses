@@ -60,7 +60,8 @@ export class ProbComponent implements OnInit {
     const sanitText = this._DomSanitizer.sanitize(SecurityContext.HTML, htmlString) || '';
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = sanitText;
-    return tempDiv.innerHTML.trim();
+    const plainText = tempDiv.textContent || tempDiv.innerText || '';
+    return plainText.trim();
   }
 
   homeMsgForm: FormGroup = this._FormBuilder.group({
