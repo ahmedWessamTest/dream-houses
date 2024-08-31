@@ -21,6 +21,7 @@ export class PreStepComponent {
 
   submitInitInformation():void{
     if(this.homeForm.valid){
+      sessionStorage.setItem('selectionAuth', '147258');
       this._Router.navigate(['/selection'])
     }
   }
