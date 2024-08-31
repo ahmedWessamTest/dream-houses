@@ -5,44 +5,71 @@
         <div>
           <span>
             <img src="./assets/icons/adds-ico.svg" alt="adds icon " />
-            تهيئة الحملات الاعلانيه</span
+            {{ "pre-step.تهيئة الحملات الاعلانيه" | translate }}</span
           >
-          <h1 class="mt-5">مرحبًا بك في منصة أختيار عقارات سكنية للتعمير</h1>
+          <h1 class="mt-5">
+            {{
+              "pre-step.مرحبًا بك في منصة أختيار عقارات سكنية للتعمير"
+                | translate
+            }}
+          </h1>
           <p>
-            قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة""قم بإضافة
-            عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة"
+            {{
+              "pre-step.قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة"
+                | translate
+            }}
+            ""
+            {{
+              "pre-step.قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة"
+                | translate
+            }}"
           </p>
           <ul class="mt-4">
             <li>
               <img src="./assets/icons/list-ico.svg" alt="" />
-              <span>قم بتحميل شعارك وتفاصيل علامتك التجارية</span>
+              <span>{{
+                "pre-step.قم بتحميل شعارك وتفاصيل علامتك التجارية" | translate
+              }}</span>
             </li>
             <li>
               <img src="./assets/icons/list-ico.svg" alt="" />
-              <span>اختر وخصص الحقول التي تحتاجها</span>
+              <span>{{
+                "pre-step.اختر وخصص الحقول التي تحتاجها" | translate
+              }}</span>
             </li>
             <li>
               <img src="./assets/icons/list-ico.svg" alt="" />
-              <span>اختر موضوعاً وصمم مظهر استمارتك</span>
+              <span>{{
+                "pre-step.اختر موضوعاً وصمم مظهر استمارتك" | translate
+              }}</span>
             </li>
             <li>
               <img src="./assets/icons/list-ico.svg" alt="" />
-              <span>ضبط رسالة شكر وإجراءات المتابعة</span>
+              <span>{{
+                "pre-step.ضبط رسالة شكر وإجراءات المتابعة" | translate
+              }}</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="col">
         <div class="px-2">
-          <h2>طريقة بناء الحملة الخاصة بك</h2>
-          <p>الطريقة المختارة لطريقة إنشاء رسالة الحملة</p>
+          <h2>{{ "pre-step.طريقة بناء الحملة الخاصة بك" | translate }}</h2>
+          <p>
+            {{
+              "pre-step.الطريقة المختارة لطريقة إنشاء رسالة الحملة" | translate
+            }}
+          </p>
           <form [formGroup]="homeForm" (ngSubmit)="submitInitInformation()">
-            <div class=" form-check form-check-inline mx-0 w-100 p-0">
+            <div class="form-check form-check-inline mx-0 w-100 p-0">
               <label class="check-container" for="manualSelection">
                 <img src="./assets/icons/manaual-selection-ico.svg" alt="" />
-                <h3>اختيار يدوي</h3>
+                <h3>{{ "pre-step.اختيار يدوي" | translate }}</h3>
                 <p>
-                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
+                  {{
+                    "pre-step.قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،"
+                      | translate
+                  }}
                 </p>
                 <input
                   class="form-check-input input-left"
@@ -54,13 +81,11 @@
                 />
               </label>
             </div>
-            <div class=" form-check form-check-inline mt-3 mx-0 w-100 p-0">
+            <div class="form-check form-check-inline mt-3 mx-0 w-100 p-0">
               <label class="check-container" for="automaticSelection">
                 <img src="./assets/icons/AI-selection-ico.svg" alt="" />
-                <h3>إنشاء عبر الذكاء الأصطناعي</h3>
-                <p>
-                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
-                </p>
+                <h3>{{ "pre-step.إنشاء عبر الذكاء الأصطناعي" | translate }}</h3>
+                <p>{{"pre-step.قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،" | translate}}</p>
                 <input
                   class="form-check-input input-left"
                   type="radio"
@@ -73,12 +98,14 @@
             </div>
             @if (!homeForm.get('messageOption')?.errors) {
             <div class="naming-form mt-3">
-              <h3>قم بتسمية مشروع أختيار</h3>
-              <p>أسم مشروعك يجب ان يكون مميز وواضح</p>
+              <h3>{{ "pre-step.قم بتسمية مشروع أختيار" | translate }}</h3>
+              <p>
+                {{ "pre-step.أسم مشروعك يجب ان يكون مميز وواضح" | translate }}
+              </p>
               <input
                 type="text"
                 class="form-control"
-                placeholder="أسم مشروع مقترح"
+                placeholder="{{ 'pre-step.أسم مشروع مقترح' | translate }}"
                 formControlName="projectName"
               />
             </div>
@@ -87,9 +114,11 @@
             homeForm.get('projectName')?.dirty)) {
             <p class="text-danger">
               @if (homeForm.get('projectName')?.getError('required')) {
-              <span>هذا الحقل مطلوب</span>
+              <span>{{ "pre-step.هذا الحقل مطلوب" | translate }}</span>
               } @if (homeForm.get('projectName')?.getError('minlength')) {
-              <span>يجب كتابه 3 حروف علي الاقل</span>
+              <span>{{
+                "pre-step.يجب كتابه 3 حروف علي الاقل" | translate
+              }}</span>
               }
             </p>
             } }
@@ -98,7 +127,7 @@
               type="submit"
               [disabled]="homeForm.invalid"
             >
-              ابداء الان
+              {{ "pre-step.ابداء الان" | translate }}
             </button>
           </form>
         </div>

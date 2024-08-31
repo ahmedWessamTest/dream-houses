@@ -1,0 +1,23 @@
+
+{
+  "pre-step":{
+    "تهيئة الحملات الاعلانيه": "Preparing advertising campaigns",
+    "مرحبًا بك في منصة أختيار عقارات سكنية للتعمير": "Welcome to the Residential Property Selection Platform for Construction",
+    "قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة": "Add your existing clients to your new system to start the experience",
+    "قم بتحميل شعارك وتفاصيل علامتك التجارية": "Upload your logo and brand details",
+    "اختر وخصص الحقول التي تحتاجها": "Select and customize the fields you need",
+    "اختر موضوعاً وصمم مظهر استمارتك": "Choose a theme and design the look of your form",
+    "ضبط رسالة شكر وإجراءات المتابعة": "Set up a thank you message and follow-up actions",
+    "طريقة بناء الحملة الخاصة بك": "How to build your campaign",
+    "الطريقة المختارة لطريقة إنشاء رسالة الحملة": "The chosen method for creating the campaign message",
+    "اختيار يدوي": "Manual selection",
+    "قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،": "Create your housing request message manually and accurately. Choose your words carefully",
+    "إنشاء عبر الذكاء الأصطناعي": "Create using AI",
+    "قم بتسمية مشروع أختيار": "Name the Selection project",
+    "أسم مشروعك يجب ان يكون مميز وواضح": "Your project name must be unique and clear",
+    "أسم مشروع مقترح": "Proposed project name",
+    "هذا الحقل مطلوب": "This field is required",
+    "يجب كتابه 3 حروف علي الاقل": "You must write at least 3 letters",
+    "ابداء الان": "Start now"
+  }
+}
