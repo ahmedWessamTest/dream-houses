@@ -1,13 +1,20 @@
+
 .bg-image{
   position: absolute;
   display: block;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   bottom: 0;
   height: 100%;
   z-index: -1;
-  object-fit: cover;
+  opacity: 0.3;
+ }
+ @media screen and (min-width: 992px) {
+.bg-image {
+  width: 50%;
+  opacity: 1;
+}
  }
 h2,
 h1 {

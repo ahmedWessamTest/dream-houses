@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PreStepComponent } from './pre-step.component';
 
 describe('PreStepComponent', () => {
@@ -11,7 +10,7 @@ describe('PreStepComponent', () => {
       imports: [PreStepComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PreStepComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
