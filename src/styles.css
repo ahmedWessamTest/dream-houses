@@ -7,6 +7,10 @@ body{
   font-family: "neo sans arabic";
   overflow-x: hidden;
 }
+html[dir="ltr"] body {
+  direction: ltr;
+  text-align: left;
+}
 section {
   position: relative;
   min-height: 100vh;
@@ -50,9 +54,17 @@ ul {
   top: 4px;
   left: 32px;
 }
+html[dir="ltr"] .check-container input.input-left {
+  left: auto;
+  right: 32px;
+}
 .check-container input.input-right {
   top: 4px;
   right: 15px;
+}
+html[dir="ltr"] .check-container input.input-right {
+  right: auto;
+  left: 32px;
 }
 .quill-editor {
   border: 0.75px solid #D3D6DC;
@@ -100,4 +112,14 @@ footer {
 }
 footer p {
   margin: 0;
+}
+html[dir = 'rtl'] .close-btn {
+  margin-right: auto;
+}
+@media screen and (min-width: 992px) {
+  html[dir="ltr"] .msg-container.msg-img::after,
+  html[dir="ltr"] .text-aria::after {
+    left: auto;
+    right: 15px;
+  }
 }

@@ -1,14 +1,13 @@
 <nav class="fixed-top z-3" [class.bg-white]="this._Router.url !== '/house'">
-  <div class="container d-flex backward-btn d-block">
+  <div class="container d-flex justify-content-between backward-btn d-block">
     @if (this._Router.url !== '/house') {
-    <button class="btn ms-auto" (click)="backwardFunc()">
+    <button class="btn" (click)="backwardFunc()">
       <img src="./assets/icons/backward-ico.svg" alt="" />
       العودة
     </button>
     }
-    <button class="btn me-auto" (click)="closeFunc()">
+    <button class="btn close-btn" (click)="closeFunc()">
       <svg
-        class="close-btn"
         width="27"
         height="27"
         viewBox="0 0 27 27"

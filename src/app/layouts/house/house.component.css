@@ -10,7 +10,7 @@
   object-fit: cover;
   z-index: -1;
 }
-svg.close-btn:hover path {
+.close-btn:hover svg path {
   fill:#FF4B55;
 }
 .backward-btn img {
